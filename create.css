@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height :100%;
+    width:100%;
+    display: flex;
+}
+.side_menu{
+    height: 100%;
+    width: 100px;
+    background-color: #333333;
+
+}
+.title{
+    height: 14px;
+    width: 100px;
+    color: #FF1493;
+}
+.tasks_menu{
+    height: calc(100% - 14px);
+    color: #FF6F00;
+    width: 100px;
+    font-size: 22px;
+    position: relative;
+}
+#home{
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    color: #FF6F00;
+    text-decoration: none;
+}
+#plus{
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    z-index: 20;
+    cursor: pointer;
+}
+#seetings{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    cursor: pointer;
+}
+/* Main */
+.hero{
+    width: calc(100% - 100px);
+    max-height: 100%;
+     font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  background-color:  #0F0F0F;
+}
+.notes{
+    margin: 10px;
+    color:white;
+}
+.Spanel{
+    height: 400px;
+    width: 600px;
+    background-color: #333333;
+    position: absolute;
+    top: 50px;
+    left: 200px;
+    border-radius: 10px;
+    cursor: move;
+    visibility: hidden;
+}
+.addpannel{
+    height: 80px;
+    background-color: #333333;
+    width: 100px;
+    color: #FF6F00;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    top: 220px;
+    left: 100px;
+    transition: left 0.3s ease-out;
+    visibility: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* wriinf area */
+.features{
+    height: 60px;
+    width: 100%;
+    background-color: #333333;
+    padding:4px;
+    visibility: hidden;
+}
+#bold{
+    background-color:#FF6F00;
+    font-size: 16px;
+    color: #333333;
+    border: 10px solid #FF6F00;
+    border-radius: 20px;
+    cursor: pointer;
+    visibility: hidden;
+}
+.features #italic{
+    background-color:#FF6F00;
+    font-size: 16px;
+    color: #333333;
+    border: 10px solid #FF6F00;
+    border-radius: 20px;
+    cursor: pointer;
+    visibility: hidden;
+}
+#save{
+    background-color:#FF6F00;
+    font-size: 16px;
+    color: #333333;
+    border: 10px solid #FF6F00;
+    border-radius: 20px;
+    cursor: pointer;
+    visibility: hidden;
+}
+#writing_area{
+    height: 410px;
+    width: 100%;
+    resize: none;
+    background-color: inherit;
+    color: white;
+    border: none;
+    font-size: 16px;
+    visibility: hidden;
+}
+#title{
+    width: 80%;
+    resize: none;
+    font-size: 20px;
+    background-color: inherit;
+    color: white;
+    border: none;
+    visibility: hidden;
+}
