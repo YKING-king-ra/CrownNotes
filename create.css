@@ -54,6 +54,9 @@ html,body{
   font-weight: 400;
   font-style: normal;
   background-color:  #0F0F0F;
+  display: flex;
+  flex-wrap: wrap;
+
 }
 .notes{
     margin: 10px;
@@ -93,6 +96,9 @@ html,body{
     background-color: #333333;
     padding:4px;
     visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 #bold{
     background-color:#FF6F00;
@@ -121,6 +127,15 @@ html,body{
     cursor: pointer;
     visibility: hidden;
 }
+#Exit{
+    background-color:#FF6F00;
+    font-size: 16px;
+    color: #333333;
+    border: 10px solid #FF6F00;
+    border-radius: 20px;
+    cursor: pointer;
+    visibility: hidden;
+}
 #writing_area{
     height: 410px;
     width: 100%;
@@ -139,4 +154,24 @@ html,body{
     color: white;
     border: none;
     visibility: hidden;
+}
+.note{
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 40px;
+    height: 250px;
+    background-color:#333333;
+    color: #ffffff;
+    overflow: hidden;
+    margin: 15px;
+    width: 250px;
+}
+.note-bottom{
+    height: 50px;
+    background-color: #FF1493;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.note-bottom i{
+    margin-left: 150px;
 }

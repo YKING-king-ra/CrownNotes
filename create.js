@@ -1,3 +1,6 @@
+// Save
+const Notes = JSON.parse(localStorage.getItem("notes") || "[]");
+
 let seetings = document.querySelector("#seetings");
 let seetings_pannel = document.querySelector(".Spanel");
 seetings.addEventListener("click",()=>{
@@ -48,6 +51,7 @@ let italic = document.querySelector("#italic")
 let save = document.querySelector("#save")
 let writing = document.querySelector("#writing_area")
 let title = document.querySelector("#title")
+let exit = document.querySelector("#Exit")
 Addnotes.addEventListener("click",()=>{
     addpannel.style.visibility="hidden"
     features.style.visibility="visible"
@@ -56,7 +60,38 @@ Addnotes.addEventListener("click",()=>{
     save.style.visibility="visible"
     writing.style.visibility="visible"
     title.style.visibility="visible"
+    exit.style.visibility="visible"
 })
+
+exit.addEventListener("click",()=>{
+    features.style.visibility="hidden"
+    bold.style.visibility="hidden"
+    italic.style.visibility="hidden"
+    save.style.visibility="hidden"
+    writing.style.visibility="hidden"
+    title.style.visibility="hidden"
+    exit.style.visibility="hidden"
+    add_bin.classList.add("show")
+})
+let add_bin = document.querySelector(".note");
+
+
+// show notes
+let heroa = document.querySelector(".notes")
+function showNotes(){
+    Notes.forEach((note) =>{
+        let n = `<ul><div class="note">
+            <h2>${note.title}</h2><br>
+            <span>${note.writing}</span>
+            <br><br><br><br><br>
+            <div class="note-bottom">
+                <p>${note.date}</p><i class="fa-solid fa-ellipsis"></i>
+            </div>
+        </div></ul>`
+        heroa.insertAdjacentHTML("afterend",n)    
+    })
+}
+showNotes();
 /// save
 save.addEventListener("click",e=>{
     e.preventDefault();
@@ -67,7 +102,15 @@ save.addEventListener("click",e=>{
         month = dateObj.getMonth(),
         day = dateObj.getDate(),
         year = dateObj.getFullYear();
-        console.log(day,month,year)
+
+        let noteInfo = {
+            title: Notetitle , writing:noteDesc,
+            date: `${day} ${month}, ${year}` 
+        }
+
+        
+        Notes.push(noteInfo)
+        localStorage.setItem("notes", JSON.stringify(Notes));
     }
     
 })
