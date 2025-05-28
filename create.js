@@ -61,6 +61,7 @@ Addnotes.addEventListener("click",()=>{
     writing.style.visibility="visible"
     title.style.visibility="visible"
     exit.style.visibility="visible"
+    heroa.style.visibility="hidden"
 })
 
 exit.addEventListener("click",()=>{
@@ -71,24 +72,22 @@ exit.addEventListener("click",()=>{
     writing.style.visibility="hidden"
     title.style.visibility="hidden"
     exit.style.visibility="hidden"
-    add_bin.classList.add("show")
 })
-let add_bin = document.querySelector(".note");
-
 
 // show notes
-let heroa = document.querySelector(".notes")
+let heroa = document.querySelector(".n_sec")
 function showNotes(){
     Notes.forEach((note) =>{
-        let n = `<ul><div class="note">
-            <h2>${note.title}</h2><br>
-            <span>${note.writing}</span>
-            <br><br><br><br><br>
-            <div class="note-bottom">
-                <p>${note.date}</p><i class="fa-solid fa-ellipsis"></i>
-            </div>
-        </div></ul>`
-        heroa.insertAdjacentHTML("afterend",n)    
+        let n = `<div class="note">
+                <div class="upper_note">
+                 <h2>${note.title}</h2>
+                 <h6>${note.writing}</h6>
+                </div>
+                <div class="down_note">
+                <p>${note.date}</p>
+                </div>
+                </div>`
+        heroa.insertAdjacentHTML("afterbegin",n)    
     })
 }
 showNotes();

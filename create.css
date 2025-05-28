@@ -3,66 +3,75 @@
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
-    height :100%;
-    width:100%;
+
+html,
+body {
+    height: 100%;
+    width: 100%;
     display: flex;
 }
-.side_menu{
+
+.side_menu {
     height: 100%;
     width: 100px;
     background-color: #333333;
 
 }
-.title{
+
+.title {
     height: 14px;
     width: 100px;
     color: #FF1493;
 }
-.tasks_menu{
+
+.tasks_menu {
     height: calc(100% - 14px);
     color: #FF6F00;
     width: 100px;
     font-size: 22px;
     position: relative;
 }
-#home{
+
+#home {
     position: absolute;
     top: 30%;
     left: 35%;
     color: #FF6F00;
     text-decoration: none;
 }
-#plus{
+
+#plus {
     position: absolute;
     top: 40%;
     left: 35%;
     z-index: 20;
     cursor: pointer;
 }
-#seetings{
+
+#seetings {
     position: absolute;
     top: 50%;
     left: 35%;
     cursor: pointer;
 }
-/* Main */
-.hero{
-    width: calc(100% - 100px);
-    max-height: 100%;
-     font-family: "Pacifico", cursive;
-  font-weight: 400;
-  font-style: normal;
-  background-color:  #0F0F0F;
-  display: flex;
-  flex-wrap: wrap;
 
+/* Main */
+.hero {
+    width: 100%;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #0F0F0F;
+    height: 100%;
+    position: relative;
 }
-.notes{
+
+.notes {
     margin: 10px;
-    color:white;
+    color: white;
 }
-.Spanel{
+
+.Spanel {
     height: 400px;
     width: 600px;
     background-color: #333333;
@@ -73,7 +82,8 @@ html,body{
     cursor: move;
     visibility: hidden;
 }
-.addpannel{
+
+.addpannel {
     height: 80px;
     background-color: #333333;
     width: 100px;
@@ -81,27 +91,30 @@ html,body{
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     position: absolute;
-    top: 220px;
-    left: 100px;
+    top: 150px;
+    z-index: 100;
+    left: 0px;
     transition: left 0.3s ease-out;
     visibility: hidden;
     cursor: pointer;
     display: flex;
     flex-wrap: wrap;
 }
+
 /* wriinf area */
-.features{
+.features {
     height: 60px;
     width: 100%;
     background-color: #333333;
-    padding:4px;
+    padding: 4px;
     visibility: hidden;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-#bold{
-    background-color:#FF6F00;
+
+#bold {
+    background-color: #FF6F00;
     font-size: 16px;
     color: #333333;
     border: 10px solid #FF6F00;
@@ -109,8 +122,9 @@ html,body{
     cursor: pointer;
     visibility: hidden;
 }
-.features #italic{
-    background-color:#FF6F00;
+
+.features #italic {
+    background-color: #FF6F00;
     font-size: 16px;
     color: #333333;
     border: 10px solid #FF6F00;
@@ -118,8 +132,9 @@ html,body{
     cursor: pointer;
     visibility: hidden;
 }
-#save{
-    background-color:#FF6F00;
+
+#save {
+    background-color: #FF6F00;
     font-size: 16px;
     color: #333333;
     border: 10px solid #FF6F00;
@@ -127,8 +142,9 @@ html,body{
     cursor: pointer;
     visibility: hidden;
 }
-#Exit{
-    background-color:#FF6F00;
+
+#Exit {
+    background-color: #FF6F00;
     font-size: 16px;
     color: #333333;
     border: 10px solid #FF6F00;
@@ -136,8 +152,10 @@ html,body{
     cursor: pointer;
     visibility: hidden;
 }
+/* .writing */
+
 #writing_area{
-    height: 410px;
+    height: 100px;
     width: 100%;
     resize: none;
     background-color: inherit;
@@ -146,7 +164,8 @@ html,body{
     font-size: 16px;
     visibility: hidden;
 }
-#title{
+
+#title {
     width: 80%;
     resize: none;
     font-size: 20px;
@@ -155,23 +174,34 @@ html,body{
     border: none;
     visibility: hidden;
 }
-.note{
+
+.note {
     font-family: 'Times New Roman', Times, serif;
-    margin-left: 40px;
-    height: 250px;
-    background-color:#333333;
+    height: 240px;
+    background-color: #333333;
+    z-index: 10;
+    width: 240px;
+    margin: 12px;
+}
+.upper_note{
+    /* background-color: #FF1493; */
+    height: 160px;
     color: #ffffff;
-    overflow: hidden;
-    margin: 15px;
-    width: 250px;
 }
-.note-bottom{
-    height: 50px;
-    background-color: #FF1493;
+.down_note{
+    height: 80px;
+    color: #ffffff;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
 }
-.note-bottom i{
-    margin-left: 150px;
+
+.n_sec {
+    background-color: inherit;
+    height: 517px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    z-index: 1;
+    overflow-y: auto;
 }
