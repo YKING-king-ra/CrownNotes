@@ -13,32 +13,30 @@ body {
 .navbar {
     width: 100%;
     height: 60px;
-    background-color: #FAEDCA;
+    background-color: #0F172A;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-
 }
 
 .logo {
-    background-image: url(logo.png);
-    height: 60px;
-    width: 100px;
+    background-image: url(Designer.png);
+    height: 70px;
+    width: 70px;
     background-size: cover;
-    background-position: center;
 }
 
 .create a {
     text-decoration: none;
-    color: #FE5D26;
+    color: #E6B422;
     font-size: 20px;
     font-weight: 500;
     margin-left: 16px;
 }
 
 .create a:hover {
-    border: 2px solid #FE5D26;
+    border: 2px solid #F0C14B;
 }
 
 .searchbar {
@@ -53,16 +51,17 @@ body {
     height: 40px;
     width: 600px;
     background-color: transparent;
-    border: #FE5D26 0.2px solid;
+    border: #E6B422 0.2px solid;
     border-radius: 25px;
     position: relative;
+    color: #CBD5E1;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .isearchbar:hover {
     border-radius: 25px;
-    box-shadow: 10px 10px 60px #d84f20,
-        -10px -10px 60px #ff6b2c;
+    box-shadow: 20px 20px 60px #cca440,
+             -20px -20px 60px #ffde56;
 }
 
 .magni {
@@ -74,14 +73,61 @@ body {
 .account{
     height: 35px;
     width: 35px;
+    fill: #E6B422;
 }
 .account:hover{
-    border: 2px solid #FE5D26;
+    border: 2px solid #F0C14B;
     border-radius: 50%;
     cursor: pointer;
 }
 .main{
     width: 100%;
     height: calc(100% - 60px);
-    background-color: #fff0dbc1;
+    background-image: url(photo-1635070041078-e363dbe005cb.png);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+}
+.main,h1,h2{
+    color: #E6B422;
+    font-size: 3rem; /* Adjust as needed */
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(230, 180, 34, 0.3);
+}
+.main p {
+    color: #E6B422;
+    /* opacity: 80%; */
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px rgba(230, 180, 34, 0.3);
+}
+.filter{
+    background-color: rgba(0, 0, 0, 0.459);
+    height: 100%;
+    width:100%;
+    display: grid;
+    place-items: center;
+}
+#get-stared{
+    color: #0F172A;
+    background-color: #E6B422;
+    height: 40px;
+    width: 120px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+#get-stared:hover{
+    background-color: #F0C14B;
+    color:#0A1121;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #E6B422; /* Gold glow */
+    transition: all 0.3s ease;
+}
+/* BOX PAGE 2 */
+#page2{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  border-top: 1px solid rgba(230, 180, 34, 0.1);
 }
